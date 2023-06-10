@@ -4,7 +4,8 @@ body {
     font-family: Optima, sans-serif;
     --border: 1px solid hsla(240, 25% ,50% , 0.3);
     --border-table: 1px solid hsla(240, 25% ,50% , 01);
-    background: hsl(240, 20%, 20%)
+    background: url(https://img.freepik.com/foto-gratis/desenfoque-abstracto-fondo-tono-calido-cielo-color-rosa-melocoton-hermoso-pastel-diseno-como-banner-presentacion-diapositivas-u-otros_1258-71151.jpg?w=2000) no-repeat center center fixed;
+    background-size: cover;
   }
   h1 {
     text-align: center;
@@ -28,6 +29,7 @@ body {
   .titulo-tabla {
     font-size: 1.5rem;
     padding: .5rem;
+    margin-top: 150px;
   }
   .border-top-left {
     border-top-left-radius: 10px;

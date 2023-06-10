@@ -33,7 +33,7 @@ body {
     max-width: 525px;
     min-height: 670px;
     position: relative;
-    background: url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat center;
+    background: url(/Imagenes/AlimentosSantiago.jpg) no-repeat center;
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
   }
   
@@ -190,3 +190,132 @@ body {
   .foot-lnk {
     text-align: center;
   }
+  /* Cuerpo de ajuste cuando el menú está abierto */
+body.slide-active {
+  overflow-x: hidden
+}
+/* Primer hijo de # página de contenido por lo que no se desplaza alrededor */
+.no-margin-top {
+  margin-top: 0px!important
+}
+/* Envuelva todo el contenido de la página, pero no dentro de esta navegacion del div si no una parte superior fija, no añada ningún relleno superior */
+#page-content {
+  position: relative;
+  padding-top: 70px;
+  left: 0;
+}
+#page-content.slide-active {
+  padding-top: 0
+}
+/* Poner barras de navegacion a la izquierda, no usar el botón */
+#slide-nav .navbar-toggle {
+  cursor: pointer;
+  position: relative;
+  line-height: 0;
+  float: left;
+  margin: 0;
+  width: 30px;
+  height: 40px;
+  padding: 10px 0 0 0;
+  border: 0;
+  background: transparent;
+}
+/* Icono de la barra hasta arriba - opcional */
+#slide-nav .navbar-toggle > .icon-bar {
+  width: 100%;
+  display: block;
+  height: 3px;
+  margin: 5px 0 0 0;
+}
+#slide-nav .navbar-toggle.slide-active .icon-bar {
+  background: orange
+}
+.navbar-header {
+  position: relative
+}
+/* Fijar la barra de navegación cuando se activa de manera que todos los elementos del menú sean accesibles */
+.navbar.navbar-fixed-top.slide-active {
+  position: relative
+}
+/* Sólo se adhieren en anchura máxima ya que estas clases no se comparten entre los tamaños */
+@media (max-width:767px) { 
+#slide-nav .container {
+    margin: 0;
+    padding: 0!important;
+}
+#slide-nav .navbar-header {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+#slide-nav .navbar.slide-active {
+    position: absolute;
+    width: 80%;
+    top: -1px;
+    z-index: 1000;
+}
+#slide-nav #slidemenu {
+    background: #f7f7f7;
+    left: -100%;
+    width: 80%;
+    min-width: 0;
+    position: absolute;
+    padding-left: 0;
+    z-index: 2;
+    top: -8px;
+    margin: 0;
+}
+#slide-nav #slidemenu .navbar-nav {
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+}
+#slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
+    min-width: 0;
+    width: 80%;
+    white-space: normal;
+}
+#slide-nav {
+    border-top: 0
+}
+#slide-nav.navbar-inverse #slidemenu {
+    background: #333
+}
+/* Esto esta detrás de la navegación pero la navegación no está dentro de él de modo que la navegación es accesible y se desplaza */
+#slide-nav #navbar-height-col {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 80%;
+    left: -80%;
+    background: #eee;
+}
+#slide-nav.navbar-inverse #navbar-height-col {
+    background: #333;
+    z-index: 1;
+    border: 0;
+}
+#slide-nav .navbar-form {
+    width: 100%;
+    margin: 8px 0;
+    text-align: center;
+    overflow: hidden;
+    /*Rapida correccion limpia*/
+}
+#slide-nav .navbar-form .form-control {
+    text-align: center
+}
+#slide-nav .navbar-form .btn {
+    width: 100%
+}
+}
+@media (min-width:768px) { 
+#page-content {
+    left: 0!important
+}
+.navbar.navbar-fixed-top.slide-active {
+    position: fixed
+}
+.navbar-header {
+    left: 0!important
+}
+}
